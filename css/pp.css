@@ -1,0 +1,124 @@
+.content{
+    font-size: 20px;
+}
+
+.content li{
+    list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" fill="%23808"><rect fill="%23FFF" width="100%" height="100%"/><circle cx="7" cy="7" r="4"></circle><circle cx="17" cy="7" r="4"></circle><circle cx="7" cy="17" r="4"></circle><circle cx="17" cy="17" r="4"></circle></svg>');
+}
+.stl {
+    margin-left: 5%;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+
+.use li{
+    list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23808"><circle cx="7" cy="7" r="4"></circle><circle cx="17" cy="7" r="4"></circle><circle cx="7" cy="17" r="4"></circle><circle cx="17" cy="17" r="4"></circle></svg>')
+}
+
+.terms{
+    font-size: 20px;
+    font-weight: bold;
+    height: 140px;
+    /* margin-left: 2%; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.ul-text{
+    margin-left: 5%;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+.ul-text li{
+    list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23808"><path d="M21 12c0 2.86-2.72 6.62-15.94 6.97-1.13.03-2.06-.88-2.06-2V7.03c0-1.13.94-2.03 2.06-2C18.28 5.38 21 9.15 21 12Z"></path></svg>')
+}
+.privacy-text{
+    margin-left: 5%;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+.privacy-text li{
+    list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23808"><circle cx="7" cy="7" r="4"></circle><circle cx="17" cy="7" r="4"></circle><circle cx="7" cy="17" r="4"></circle><circle cx="17" cy="17" r="4"></circle></svg>')
+
+}
+
+.sub-terms{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 7%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.sub-terms li{
+    list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23808"><path d="M21 12 5 21V3l16 9z"></path></svg>');
+}
+
+.condition{
+    background-image: url(../media/t&c.png);
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.refund{
+    background-image: url(../media/refund.png);
+    height: 470px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80%;
+    margin-left: 10%;
+}
+.privacy{
+    background-image: url(../media/pp.png);
+    height: 750px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.terms p{
+    margin-bottom: 3%;
+}
+
+.term-icon{
+   
+    display: inline-block;
+    float: left;
+   margin-bottom: 2%;
+   padding-left: 12%;
+
+}
+.term-text{
+    display: inline-block;
+    float: right;
+   
+    margin-bottom: 2%;
+    width: 80%;
+}
+.fa-clipboard{
+    color: rgb(255, 255, 255);
+    background: rgb(210, 9, 9);
+    border: 15px solid rgb(209, 59, 9);
+    border-radius: 30px 30px 30px 30px;
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+.fa-shield-halved{
+    color: rgb(55, 33, 144);
+    background: white;
+    border: 15px solid rgb(60, 40, 161);
+    border-radius: 30px 30px 30px 30px;
+    font-size: 40px;
+    margin-top: 20px;
+}
+.fa-check-to-slot{
+    color: rgb(202, 211, 18);
+    background: rgb(96, 94, 64);
+    border: 15px solid rgb(215, 202, 21);
+    border-radius: 30px 30px 30px 30px;
+    font-size: 40px;
+    margin-top: 20px;
+}
+.master{
+    width: 90%;
+    margin-left: 5%;
+}

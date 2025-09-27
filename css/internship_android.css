@@ -1,0 +1,127 @@
+@media only screen and (max-width: 600px){
+
+
+    .internship-body{
+        display: block;
+        margin-top: 5%;
+    }
+    
+    .int-img{
+        width: 93%;
+        height: 500px;
+        margin-left: 3%;
+      }
+    
+    .prod-txt{
+        display: block;
+        width: 90%;
+        text-align: justify;
+        margin-left: 3%;  
+    }
+    
+    #internbody-img{
+        display: none;
+    }
+    .intern-section2{
+        text-align: center;
+         
+          height: 800px;
+          margin-bottom: 5%;
+      }
+    .t-boxes{
+        display: block;
+        justify-content: space-evenly;
+        margin-top: 20px;
+        
+    }
+    .t-box{
+        
+        /* border: 2px solid black; */
+        width: 90%;
+        margin-left: 5%;
+       margin-bottom: 5%;
+       
+        height: 350px;
+        font-size: 16px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        box-shadow: 3px 3px 6px 2px #695fb7;
+    }
+    
+    
+    div[class=box-6] {
+        width: 385px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 12%;
+        background-color: #1805ab;
+        color: white;
+      }
+    
+    .who-pro_img{
+        width: 40%;
+        height: 450px;
+        margin-left: 4%; 
+        display: none;
+    }
+    .who-img-2{
+        width:25%;
+         height:350px; margin-right: 5%; 
+         margin-top: 3%;
+         display: none;
+      }
+    
+    .prod-txt{
+        display: block;
+        width: 90%;
+        text-align: justify;
+        margin-left: 3%;
+        margin-bottom: 5%;
+    }  
+    .prod-txt-heading{
+        text-align: center;
+    }
+    
+    .testimonial-text{
+        width: 55%; 
+        margin-left: 40%; 
+        font-weight: bold; 
+        margin-bottom: 5%; 
+        font-size: 10px;
+        color: black;
+      }
+    
+    .st1{
+        font-size: 30px;
+        font-weight: bold;
+        color: black;
+       
+    }  
+    
+    .t-footpanel{
+        display: block;
+        height: 520px;
+        text-decoration: none;
+        list-style: none;
+        justify-content: space-evenly;
+        margin-top: 3%;
+        width: 100%;
+    }
+    .a-t-footpanel{
+        display: block;
+        height: 720px;
+        text-decoration: none;
+        list-style: none;
+        justify-content: space-evenly;
+        margin-top: 3%;
+        width: 100%;
+    }
+    
+    div[class=box-4] {
+       
+        /* text-align: center; */
+        /* align-items: center; */
+        margin-left: 35%;
+      }
+      
+      
+    }
