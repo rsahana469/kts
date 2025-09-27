@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="config/config.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/index.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="css/android.css">
+    <script src="js/androidmenu.js"></script>
+    <title>K-AKA/Home</title>
+    <link rel="icon" type="image/png/jpeg" href="media/logo.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+</head>
+
+<body onload="wait();">
+
+    <div class="loader-body" id="processing">
+        <div class="pre-loader">
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+        </div>
+    </div>
+    <div class="main-container" id="main">
+        <header id="">
+            <div id="mySidepanel" class="sidepanel">
+                <div><img src="media/logo.jpeg" class="android_menu_logo"></div>
+                <div class="sidepanel-content">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <a href="template/services.html">Services</a>
+                    <a href="index.html#clients">Clients</a>
+                    <a href="index.html#contact">Contact</a>
+                    <a href="template/gallery.html">Gallery</a>
+                    <a href="template/internship.html">Internship</a>
+                    <a href="https://k-akatechnology.in/apply/">Apply Internship</a>
+                    <a href="https://www.google.com/maps/place/K-AKA+Technology+Services/@13.0175543,77.5297571,16.88z/
+                data=!4m18!1m9!3m8!1s0x3bae1982022c82e1:0x432c8706e0a7f24!2sK-AKA+Technology+Services!8m2!3d13.
+                0163371!4d77.5305386!9m1!1b1!16s%2Fg%2F11l466gntc!3m7!1s0x3bae1982022c82e1:0x432c8706e0a7f24!8m2!3d13.
+                0163371!4d77.5305386!9m1!1b1!16s%2Fg%2F11l466gntc?entry=ttu">Submit Review</a>
+                    <a href="template/development.html">Intern Login</a>
+                </div>
+            </div>
+            <button class="openbtn" id="androidbtn" onclick="openNav()">☰</button>
+
+            <nav class="navbar bg" id="header_color">
+                <ul class="nav-list " id="header_color">
+                    <div class="logo"><img src="media/logo.jpeg" alt="logo" class="nav-logo"></div>
+
+                    <li> <a href="#about"> About</a></li>
+                    <li> <a href="#Services "> Services <i class="fas fa-caret-down"></i></a>
+                        <div class="dd">
+                            <ul class="inner-nav-list">
+                                <li><a href="template/development.html">SaaS</a></li>
+                                <li><a href="template/internship.html">Technical Training/Internship</a></li>
+                                <li><a href="template/development.html">iPC</a></li>
+                                <li><a href="template/development.html">KTC</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li> <a href="#products"> Products <i class="fas fa-caret-down"></i> </a>
+                        <div class="dd">
+                            <ul>
+                                <li><a href="https://atomsathena.com/student/">Athenna</a></li>
+                                <li><a href="template/development.html">i&gt;&lt;AM</a></li>
+                                <li><a href="template/development.html">TecHNoT</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li> <a href="#clients">Clients <i class="fas fa-caret-down"></i> </a>
+                        <div class="dd">
+                            <ul>
+                                <li><a href="https://www.atomm.in/">atomm</a></li>
+                                <li><a href="https://www.skilledhire.in/">Skilledhire</a></li>
+                                <li><a href="https://sssact.co.in/">sssact</a></li>
+                                <li><a href="https://omkartechsolution.in/">OmkarSolutions</a></li>
+                                <li><a href="https://gurutva-academy.in/">GurutvaAcademy</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li> <a href="#contact"> Contact</a></li>
+                    <li> <a href="#review"> Review</a></li>
+                    <li> <a href="template/gallery.html"> Gallery</a></li>
+                    <li> <a>Login <i class="fas fa-caret-down"></i></a>
+                        <div class="dd">
+                            <ul>
+                                <li><a href="https://k-akatechnology.in/admin/">Admin Login</a></li>
+                                <li><a href="template/development.html">Employee Login</a></li>
+                                <li><a href="template/internlogin.html">Intern Login</a></li>
+                                <li><a href="https://k-akatechnology.in/ipc/">iPC Admin Login</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <div class="insta">
+                    <li> <a href="https://www.instagram.com/kakatechnology/" target="_blank">
+                            <img src="media/instagram-icon.png" alt="Instagram Icon" class="icon-image">
+                        </a></li>
+                    <li> <a href="https://www.linkedin.com/company/k-aka-technology-services/" target="_blank">
+                            <img src="media/linkedin.png" alt="linkedin Icon" class="linkedin-icon"></a></li>
+                    <li> <a href="https://www.facebook.com/kakaTechnologyService" target="_blank"> <i
+                                class="fa-brands fa-facebook-f"></i></a></li>
+                    <li> <a href="https://www.bing.com/maps?mepi=127%7EDirections%7EUnknown%7EDirection_Button&ty=0&rtp=pos.13.023292541503906_77.5858154296875__K-AKA+Technology+Services__e_%7E&mode=d&v=2&sV=1&cp=13.023286%7E77.585792&lvl=14.5"
+                            target="_blank">
+                            <img src="media/map-icon.png" alt="Map Icon" class="map-image"></a></li>
+                </div>
+            </nav>
+        </header>
+        <!--    END of the Header -->
+        <hero>
+            <div class="section1">
+                <div class="abt-img">
+                    <img src="media/about.png" width="350px" class="img_main">
+                </div>
+                <div class="content">
+                    <h1 id="kts">K-AKA TECHNOLOGY</h1><br>
+                    <p> is a fast growing software company Bangalore started in the year 2020 to
+                        provide the best services to the users needs. It is a Software as a service (SaaS) company,
+                        currently growing its network in the Bangalore, New-Delhi, etc.</p>
+                </div>
+            </div>
+
+            <h1 id="Services" class="servicess">Services</h1>
+            <div class="box-4" style="display: none;">
+                <div class="box-3" onclick="openservice()">
+                    <div class="btn btn-three">
+                        <span>Know More</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Content -->
+            <div class="contains" id="about">
+                <div class="card">
+                    <img onclick="openservice()" src="logo1.png" class="card-img-top" alt="Saas">
+                    <div class="card-body">
+                        <h3 class="card-title">Software as a Service (SaaS)</h3>
+                        <p class="card-text">A cloud computing model where the provider delivers application software to
+                            clients and handles all the underlying physical and software resources needed for the
+                            application.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img onclick="openservice()" src="logo2.png" class="card-img-top" alt="Development">
+                    <div class="card-body">
+                        <h3 class="card-title">Software Development And Maintenance</h3>
+                        <p class="card-text">Creating applications through analysis, design, coding, testing, and
+                            deployment. Maintenance on fixing bugs, updating features, ensuring compatibility.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img onclick="openservice()" src="media/logo02.jpg" class="card-img-top" alt="Internship">
+                    <div class="card-body">
+                        <h3 class="card-title">Technical Internship</h3>
+                        <p class="card-text">Provides hands-on experience in technical field such as software
+                            development, engineering or IT. Interns work on real projects and gain practical skills
+                            under professional guidance.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img onclick="openservice()" src="logo4.png" class="card-img-top" alt="KTC">
+                    <div class="card-body">
+                        <h3 class="card-title">KTC</h3>
+                        <p class="card-text">KTC, or Knowledge Transfer Center, specializes in providing training and
+                            resources for individuals and organizations to enhance their technical skills.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="clients">
+                <h1 id="clients">Clients</h1>
+            </div>
+            <div class="team-contain">
+                <div class="team-members">
+                    <div class="team-member">
+                        <a href="https://www.atomm.in" title="Atomm">
+                            <img src="media/atomm1.jpg" alt="atomm">
+                        </a>
+                    </div>
+                    <div class="team-member">
+                        <a href="https://www.skilledhire.in" title="Skilledhire">
+                            <img src="media/skilledhire.jpg" alt="skilledhire">
+                        </a>
+                    </div>
+                    <div class="team-member">
+                        <a href="https://www.omkartechsolution.in" title="Omkar Solutions">
+                            <img src="media/omkar.jpg" alt="omkar">
+                        </a>
+                    </div>
+                    <div class="team-member">
+                        <a href="https://www.gurutva-academy.in" title="Gurutva Academy">
+                            <img src="media/gurutva.jpg" alt="gurutva">
+                        </a>
+                    </div>
+                    <div class="team-member">
+                        <img src="media/sssact1.jpg" alt="ssact">
+                        <a href="https://www.sssact.co.in" title="SSSACT">
+                        </a>
+                    </div>
+                    <div class="team-member">
+                        <img src="media/globalmedregs.png" alt="globalmedregs">
+                        <a href="template/development.html" title="globalmedregs">
+                        </a>
+                    </div>
+                    <div class="team-member">
+                        <img src="media/csanalytics.png" alt="csanalytics">
+                        <a href="template/development.html" title="csanalytics">
+                        </a>
+                    </div>
+                    <div class="team-member">
+                        <img src="media/sssact1.jpg" alt="ssact">
+                        <a href="template/development.html" title="SSSACT">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <h1 class="product1" id="products">
+                <center>Our Products</center>
+            </h1>
+            <div class="contain">
+                <div class="productt">
+                    <img src="logo01.jpg" alt="Athenna">
+                    <div class="productt-description">
+                        <h2>Athenna</h2>
+                        <p>Athenna is our cutting-edge cybersecurity solution, designed to protect your digital assets
+                            with advanced threat detection and real-time monitoring.</p>
+                    </div>
+                </div>
+                <div class="productt">
+                    <img src="logo02.png" alt="ixam">
+                    <div class="productt-description">
+                        <h2>iXAM</h2>
+                        <p>iXAM is our comprehensive exam preparation platform, offering interactive study materials,
+                            mock exams, and personalized learning paths for your success.</p>
+                    </div>
+                </div>
+                <div class="productt">
+                    <img src="media/Technot1.jpg" alt="TecHNot">
+                    <div class="productt-description">
+                        <h2>Techsea</h2>
+                        <p>Techsea is our innovative technology consulting service, providing tailored solutions to
+                            optimize your business processes and enhance digital transformation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                }
+            </script>
+
+            <!-- <div class="content-container">
+                    <div class="text-inner">
+                        <h2>Abhishek Kumar Anshu</h2><br>
+                        <h3>Head, KTS</h3><br>
+                        
+                    </div>
+                </div>
+                <div class="image-content">
+                    <img src="media/.png" alt="Content Image">
+                </div>
+            </div>-->
+
+            <div class="containerr">
+                <div class="contact-form" id="contact">
+                    <div class="contact-style">
+                        <h1>
+                            <center>Contact Us</center>
+                        </h1>
+                        <br>
+                    </div>
+                    <form id="contact-form" method="POST" action="#">
+                        <div class="input-container">
+                            <i class="material-icons">person</i>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="input-container">
+                            <i class="material-icons">email</i>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="input-container">
+                            <i class="material-icons">phone</i>
+                            <input type="tel" id="phone" name="phone" placeholder="Your Phone (optional)">
+                        </div>
+                        <div class="input-container">
+                            <i class="material-icons">message</i>
+                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit">Send</button>
+                        <div id="error-all" class="error-message">Please fill in all required fields.</div>
+                        <div id="error-email" class="error-message">Please enter a valid email address.</div>
+                        <div id="success-message" class="success-message">Message sent successfully!</div>
+                    </form>
+                </div>
+                <div class="image-container">
+                    <img src="media/contactlogo.png" alt="Contact Image">
+                </div>
+            </div>
+
+
+            <div class="review" id="review">
+                <span class="heading">User Rating</span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+
+                <p>5 average based on 114 reviews.</p>
+                <br>
+                <hr style="border:3px solid #f1f1f1">
+
+                <div class="row">
+                    <div class="side">
+                        <div>5 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-5"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>112</div>
+                    </div>
+                    <div class="side">
+                        <div>4 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-4"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>2</div>
+                    </div>
+                    <div class="side">
+                        <div>3 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-3"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>0</div>
+                    </div>
+                    <div class="side">
+                        <div>2 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-2"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>0</div>
+                    </div>
+                    <div class="side">
+                        <div>1 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-1"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>0</div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-4">
+                <div class="box-3" onclick="openreview()">
+                    <div class="btn btn-five">
+                        <span>Submit Review</span>
+                    </div>
+                </div>
+            </div>
+        </hero>
+
+        <footer>
+
+            <div class="footpanel">
+
+                <div class="service">
+                    <ul>
+                        <li>
+                            <h3>Services</h3>
+                        </li>
+                        <li> <a href="template/development.html"> SaaS</a></li>
+                        <li> <a href="template/internship.html"> Technical Internship</a></li>
+                        <li> <a href="template/development.html"> Sofware Development</a></li>
+                        <li> <a href="template/development.html"> KTC</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="Policy">
+                    <ul>
+                        <li>
+                            <h3>Policies</h3>
+                        </li>
+                        <li> <a href="template/privacypolicy.html">Privacy Policy</a></li>
+                        <li> <a href="template/T&C.html">Terms And Conditions </a></li>
+                        <li> <a href="template/refund.html">Refund Policy </a></li>
+                    </ul>
+                </div>
+
+                <div class="product">
+                    <ul>
+                        <li>
+                            <h3>Products</h3>
+                        </li>
+                        <li><a href="https://atomsathena.com/student/">Athenna</a></li>
+                        <li> <a href="template/development.html"> iXAM</a></li>
+                        <li> <a href="template/development.html"> TechNot</a></li>
+                    </ul>
+                </div>
+                <div class="ReachUs">
+                    <h3>Reach Us</h3>
+                    <ul>
+                        <li>Mail To: admin@k-akatechnology.in</li>
+                        <li>Call/WhatsApp Us: 9560912748</li>
+                        <li>Address: #10,6th cross,3rd Block,Nandini Layout</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="second">
+                <ul>
+                    <li> <a href="https://www.instagram.com/kakatechnology/" target="_blank">
+                            <img src="media/instagram-icon.png" alt="Instagram Icon" class="icon-image">
+                        </a></li>
+                </ul>
+                <ul>
+                    <li> <a href="https://www.linkedin.com/company/k-aka-technology-services/" target="_blank">
+                            <img src="media/linkedin.png" alt="linkedin Icon" class="linkedin-icon1">
+                        </a></li>
+                </ul>
+                <ul>
+                    <li> <a href="https://www.google.com/maps/dir/12.9946515,77.4590682/k-aka+technology+services+6th+main+road+dr+puneeth+rajkumar+memorial+3rd+block+jenakal+siddeswara+nagar+nandini+layout+bengaluru+karnataka/@13.0007476,77.4101989,12z/data=!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bae1982022c82e1:0x432c8706e0a7f24!2m2!1d77.5305386!2d13.0163371?entry=ttu"
+                            target="_blank"> <img src="media/map-icon.png" alt="Map Icon" class="map-icon1"> </a></li>
+                </ul>
+                <ul>
+                    <li> <a href="https://www.facebook.com/kakaTechnologyService" target="_blank">
+                            <i class="fa-brands fa-facebook-f"></i> </a></li>
+                </ul>
+            </div>
+
+            <div class="third">
+                <p>Copyright @ 2024 released version:V1</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+<script src="js/contact.js"></script>
+
+</html>
