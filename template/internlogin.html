@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src= "https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="../config/config.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/intern.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>K-AKA/Internship</title>
+    <link rel="icon" type="image/png/jpeg"  href="../media/logo.png" > 
+   
+</head>
+<body>
+    
+    <div id="login_con">
+
+      
+
+                <div class="login-image">
+
+                    <img src="../media/login_image.png" id="login_icon">
+                   
+                </div>
+
+                <div class="login-body">
+                    
+                   <form class="intern-login-form">
+                    <p id="message"></p>
+                    <input type="password" required placeholder="Enter your  id" title="KTS*****" id="intern_id"><br>
+                    <input type="password" required placeholder="Enter your  Contact" title="77600829**" id="intern_password"><br>
+                    <input type="submit" id="submit_btn">
+                   </form>
+                    
+                </div> 
+    </div>
+
+    <div id="home_con" style="display: none;">
+
+      
+        <div class="master-inter-header" style="display: flex;">
+
+                <div class="headerlogo"  >
+                    <img src="../media/logo.png" id="logo_image">
+                    
+                </div>
+                <div class="headername">
+                    <h1>K-AKA Technology Services ( KTS ) </h1>
+                </div>
+                <div class="headerinfo" >
+                    <p id="active_user">xyz</p>
+                </div>
+         </div>
+         <hr>
+            
+        
+
+        <div class="internsection1">
+
+            <div class="internabt-img">
+               <button onclick="openHomecon()" >Home </button> <br>
+               <button onclick="openUpdatecon()" id="diabled2">Update Your Details </button><br>
+               <button onclick="openAttendance()" id="diabled3">Attendance Policy </button><br>
+               <button onclick="openpresence()" id="diabled4">Office Presence Details</button><br>
+               <button onclick="openfeedback()" id="feedback_btn"> Internship Feedback </button><br>
+               <button onclick="openAlumini()" id="alumni_btn1" > Alumni Registration </button><br>
+               <button onclick="opencertificate()" id="gertCertificate">Get Certificate </button><br>
+               <button onclick="opensop()" id="diabled5" >Internship SOP</button><br>
+               <button onclick="openterms()" id="diabled6">Internship T&C</button><br>
+               <button onclick="openpayment()" id="payment_btn">Payment Details</button><br>
+               <button onclick="logout()">Logout </button><br>
+            </div>
+           
+            <div class="interncontent">
+                
+             <!--- All container -->
+                <div id="personal-con"  style="display: none;" >
+                    <div class="content-header">
+                        Your Details
+                    </div>
+
+                    <div class="personaldetials">
+                          <p id="name" >Name: unknown</p>
+                          <p id="contact">contact: unknown</p>
+                          <p id="branch">branch:unknwn</p>
+                          <p id="usn">usn:unknwn</p>
+                          <p id="college">college:unknwn</p>
+                          <p id="email">email:unknwn</p>    
+                          <p id="intern_start"></p>
+                          <p id="intern_end"></p>  
+                    </div>
+
+                    <div class="interndetails">
+
+                    </div>
+
+                
+                </div>
+
+                <div id="update-personal-con" style="display: none;"  >
+                   
+                    <div class="content-header">
+                        Update Details
+                    </div>
+
+                    <div class="updatedetials">
+
+                        <input id="uname" placeholder="Your Name" style="font-weight: bold;"><br>
+                        <input id="ucontact" placeholder="Your Contact" style="font-weight: bold;"><br>
+                        <input id="ubranch" placeholder="Your Branch" style="font-weight: bold;"><br>
+                        <input id="uusn" placeholder="Your USN" style="font-weight: bold;"><br>
+                        <input id="ucollege" placeholder="Your College" style="font-weight: bold;"><br>
+                        <input id="uemail" placeholder="Your Email" style="font-weight: bold;"><br>
+
+
+                        <button onclick="update()">Update</button>
+                             
+                    </div>
+
+                </div>
+
+                <div id="attendance-con" style="display: none;">
+                    <div class="content-header">
+                        Attendance Policy 
+                    </div>
+                    <div  class="common_intern_content">
+                        <p><b>1.</b> Employees/Interns must clock in as per respective shedule. 
+                            If there is any problem recording a clock-in , he/She should inform the manager immediately via an email.( <b> internship@k-akatechnology.in </b>)</p>
+                            <p><b>2.</b> He/She need an Physical Presence at office as a proof of Biometric Verification to complete the Daily attendance at the offie.</p>
+                            <p><b>3.</b> Any Tail Gate/ Invalid Biometric Details at the intern/Employee account shall be taken into serious concerns</p>
+                            <p><b>4.</b> Click on <b>Office Presence Details</b> Button and scan the code to complete the proedure.</p>
+                        
+                    </div>
+
+                </div>
+
+                <div id="presence-con" style="display: none;">
+                    <div class="content-header">
+                        Attendance At Office
+                    </div>
+                    <div  class="common_intern_content">
+                       <p>Scan the Bar Code to mark Attendance</p>
+                       <img id="attendance_code" src="../media/attendance_qr_code.jpg">
+                    </div>
+
+                </div>
+
+                <div id="feedback-con" style="display: none;">
+                    <div class="content-header">
+                        Submit Feedback
+                    </div>
+
+                    <div  class="common_intern_content">
+                        <p>Scan the Bar Code to Submit review</p>
+                        <img id="attendance_code" src="../media/feedback_qr_code.jpg">
+                     </div>
+                </div>
+
+                <div id="alumini-con" style="display: none;">
+                    <div class="content-header">
+                        Alumni Registration
+                    </div>
+
+                    <div class="almuni_details">
+                        <form id="alumuni_form">
+                            <input placeholder="Enter InternId" required  id="a_internid">
+                            <input placeholder="Enter fullname" required id="a_fullname">
+                            <input placeholder="Enter Domain" required id="a_domain">
+                            <input placeholder="Enter Branch" required id="a_branch">
+                            <input placeholder="Enter College" required id="a_college"> <br>
+                            <input  id="alumni_btn" type="submit">
+                        </form>
+                    </div>
+                </div>
+
+                <div id="certificate-con" style="display: none;">
+                    <div class="content-header">
+                        Your Certificate
+                    </div>
+
+                    <div  class="common_intern_content">
+                       <p>Click below to access your Certificate</p>
+                       <button id="certificate_btn">Get Certiifcate</button>
+
+                    </div>
+                </div>
+                
+                <div id="sop-con" style="display: none;">
+                    <div class="content-header">
+                        Standard Of procedure
+                    </div>
+
+                    <div  class="common_intern_content">
+                       <p><b> S.O.P-1 </b> Intern has to submmit Filled Application Form.  </p>
+                       <p><b> S.O.P-2 </b> In Case of Online Metting , a staus trackr Must be issued for Daily  Sprint meeting.  </p>
+                       <p><b> S.O.P-3 </b> Status Tracker / Physical Biometric Verification at office shall be considered as an attendance chart sheet of his/her.  </p>
+                       <p><b> S.O.P-4 </b> Intern/Employee has to cross Specified phase of the Internship shedule for the succesful completion of the program.  </p>
+                       <p><b> S.O.P-5 </b> In case of Any query reach on <b>internship@k-akatechnology.in </b> </p>
+                    </div>
+                </div>
+
+                <div id="terms-con" style="display: none;">
+                    <div class="content-header">
+                        Terms And Condition(s)
+                    </div>
+
+                    <div  class="common_intern_content">
+                        <p><b>1.</b>Employee/Intern Shall be abide with the terms and condition in and off of the office till the completon of the 
+                        programme</p>
+                        <p><b>2.</b> He/She shall use the office space as per the requiremnt and dicipilniary way, We welcome inter to work in and off the allocated hours</b> </p>
+                        <p><b>3.</b> Kindly do not share the any document marked with private document access filed in and out of the organisation.  </p>
+                        <p><b>4.</b> He/She should take care of the assets , do not damage the resource present at the office.</p>
+
+                    </div>
+                </div>
+
+                <div id="payment-con" style="display: none;">
+                    <div class="content-header">
+                        Payment Details
+                    </div>
+                    <div  class="common_intern_content">
+                       
+                    </div>
+                </div>
+            
+
+            
+            </div>
+
+        </div>
+     
+    
+    </div>
+    
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+<script src="../js/intern.js"></script>
+<script src="../js/cookies.js"></script>
+<script src="../js/fetchdata.js"></script>
+<script>fetchdata()</script>
+<script src="../js/updaterecord.js"></script>
+<script src="../js/alumni.js"></script>
+</html>
